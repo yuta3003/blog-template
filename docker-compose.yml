@@ -1,5 +1,17 @@
 version: "3.8"
 services:
+  web:
+    build:
+      context: .
+      dockerfile: ./Docker/nginx/Dockerfile
+    ports:
+    - 80:80
+    volumes:
+    - ./nginx/conf.d:/etc/nginx/conf.d
+    tty: true
+    networks:
+      - frontend
+
   frontend:
     build:
       context: .
@@ -7,6 +19,12 @@ services:
     volumes:
     - ./frontend:/app
     - "/app/node_modules"
-    ports:
-    - 3000:3000
+    expose:
+    - "3000"
     tty: true
+    networks:
+      - frontend
+
+networks:
+  frontend:
+    driver: bridge
