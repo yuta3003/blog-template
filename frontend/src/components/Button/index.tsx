@@ -1,23 +1,20 @@
 import React from 'react'
 import styles from './Button.module.scss'
 
-interface ButtonProps {
-  children: React.ReactNode
+interface Props {
+  text: string
+  handleClick: () => void
 }
 
-// export default function Button({ children }: ButtonProps) {
-//   return (
-//     <button className={styles.button}>
-//       {children}
-//     </button>
-//   );
-// }
-
-const Button = ({ children }: ButtonProps) => {
+const Button = (props: Props) => {
+  const {text, handleClick} = props
   return (
-    <button className={styles.button}>
-      {children}
-    </button>
+    <div
+      className={styles.button}
+      onClick={handleClick}
+    >
+      {text}
+    </div>
   );
 };
 

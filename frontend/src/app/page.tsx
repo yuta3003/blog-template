@@ -1,8 +1,11 @@
+'use client'
+
 import Image from 'next/image'
 import styles from './page.module.css'
 import Button from '@/components/Button'
 
 export default function Home() {
+  const handleTest = () => {}
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -28,8 +31,10 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <Button>Click me</Button>
-
+      <Button
+        text='TEST'
+        handleClick={handleTest}
+      />
       <div className={styles.center}>
         <Image
           className={styles.logo}
