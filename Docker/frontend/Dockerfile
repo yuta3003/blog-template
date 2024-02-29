@@ -1,5 +1,5 @@
 # Stage to install the package
-FROM node:20.11.1 as desp-stage
+FROM node:20.11.1 as deps-stage
 WORKDIR /app
 
 COPY ./frontend/package.json ./frontend/yarn.lock ./
@@ -9,11 +9,8 @@ RUN yarn install --production
 FROM node:20.11.1 as build-stage
 WORKDIR /app
 
-COPY ./frontend ./
+COPY ./frontend /app
 RUN yarn install
-
-RUN yarn lint
-RUN yarn format
 
 RUN yarn build
 
@@ -21,5 +18,9 @@ RUN yarn build
 FROM node:20.11.1 as runtime-stage
 WORKDIR /app
 
+COPY --from=deps-stage /app/node_modules ./node_modules
+COPY --from=build-stage /app/.next ./.next
+COPY --from=build-stage /app/public ./public
+
 ENTRYPOINT ["yarn"]
-CMD []
+CMD ["start"]
