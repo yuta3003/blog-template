@@ -1,0 +1,35 @@
+version: "3.8"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./Docker/nginx/Dockerfile
+    volumes:
+    - ./nginx/conf.d:/etc/nginx/conf.d
+    ports:
+    - 80:80
+    tty: true # for Dev
+    networks:
+    - frontend
+
+  frontend:
+    build:
+      context: .
+      dockerfile: ./Docker/frontend/Dockerfile.dev
+    volumes:
+    - ./frontend:/app
+    - "node_modules_volume:/app/node_modules"
+    expose:
+    - "3000"
+    tty: true
+    networks:
+    - frontend
+
+networks:
+  frontend:
+    driver: bridge
+
+volumes:
+  node_modules_volume:
+    name: node_modules_volume
+    driver: local
