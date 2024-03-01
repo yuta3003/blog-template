@@ -10,12 +10,13 @@ services:
     - ./nginx/conf.d:/etc/nginx/conf.d
     tty: true
     networks:
-      - frontend
+    - frontend
 
   frontend:
     build:
       context: .
-      dockerfile: ./Docker/frontend/Dockerfile
+      dockerfile: ./Docker/frontend/Dockerfile.dev
+    image: blog-template-frontend:dev
     volumes:
     - ./frontend:/app
     - "/app/node_modules"
@@ -23,7 +24,7 @@ services:
     - "3000"
     tty: true
     networks:
-      - frontend
+    - frontend
 
 networks:
   frontend:

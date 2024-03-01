@@ -10,9 +10,8 @@ FROM node:20.11.1 as build-stage
 WORKDIR /app
 
 COPY ./frontend /app
-RUN yarn install
-
-RUN yarn build
+RUN yarn install && \
+    yarn build
 
 # Stage to be executed
 FROM node:20.11.1 as runtime-stage

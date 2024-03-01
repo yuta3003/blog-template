@@ -13,12 +13,9 @@ services:
     build:
       context: .
       dockerfile: ./Docker/frontend/Dockerfile
-    # volumes:
-    # - ./frontend:/app
-    # - "node_modules_volume:/app/node_modules"
+    image: blog-template-frontend:prod
     expose:
     - "3000"
-    tty: true
     networks:
     - frontend
 
