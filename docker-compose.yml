@@ -6,24 +6,21 @@ services:
       dockerfile: ./Docker/nginx/Dockerfile
     ports:
     - 80:80
-    volumes:
-    - ./nginx/conf.d:/etc/nginx/conf.d
-    tty: true
     networks:
-      - frontend
+    - frontend
 
   frontend:
     build:
       context: .
       dockerfile: ./Docker/frontend/Dockerfile
-    volumes:
-    - ./frontend:/app
-    - "node_modules_volume:/app/node_modules"
+    # volumes:
+    # - ./frontend:/app
+    # - "node_modules_volume:/app/node_modules"
     expose:
     - "3000"
     tty: true
     networks:
-      - frontend
+    - frontend
 
 networks:
   frontend:

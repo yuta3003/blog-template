@@ -18,6 +18,7 @@ RUN yarn build
 FROM node:20.11.1 as runtime-stage
 WORKDIR /app
 
+COPY ./frontend/package.json ./frontend/yarn.lock ./
 COPY --from=deps-stage /app/node_modules ./node_modules
 COPY --from=build-stage /app/.next ./.next
 COPY --from=build-stage /app/public ./public
