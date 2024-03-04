@@ -5,7 +5,10 @@ import styles from './page.module.css'
 import Button from '../components/Button'
 
 export default function Home() {
-  const handleTest = () => {}
+  const handleClick = (event: any) => {
+    console.log('Button clicked!', event);
+  };
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -33,7 +36,13 @@ export default function Home() {
       </div>
       <Button
         text='Button'
-        handleClick={handleTest}
+        handleClick={handleClick}
+        className="blue"
+      />
+      <Button
+        text='Button'
+        handleClick={handleClick}
+        className="red"
       />
       <div className={styles.center}>
         <Image
