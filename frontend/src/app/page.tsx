@@ -32,7 +32,7 @@ export default function Home() {
         </div>
       </div>
       <Button
-        text='TEST'
+        text='Button'
         handleClick={handleTest}
       />
       <div className={styles.center}>
