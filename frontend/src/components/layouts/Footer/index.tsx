@@ -3,8 +3,8 @@ import styles from './Footer.module.scss';
 
 const Footer = () => {
   return (
-    <div>
-      <p>test</p>
+    <div className={styles.footer}>
+      404 motivation not found
     </div>
   );
 };
