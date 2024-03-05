@@ -1,0 +1,25 @@
+// components/Header.module.scss
+$header-background-color: #f5f5f5;
+$text-color: #333;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: $header-background-color;
+}
+
+
+// .navigation {
+//   ul {
+//     list-style: none;
+//     display: flex;
+//     gap: 20px;
+//   }
+
+//   a {
+//     text-decoration: none;
+//     color: $text-color;
+//   }
+// }

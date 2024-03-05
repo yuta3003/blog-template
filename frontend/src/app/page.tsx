@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import styles from './page.module.css'
-import Button from '../components/Button'
+import Button from '../components/elements/Button'
 
 export default function Home() {
   const handleClick = (event: any) => {
