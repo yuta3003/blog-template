@@ -1,22 +1,13 @@
 .button {
   display: block;
   text-align: center;
-  text-decoration: none;
-  width: 120px;
+  // text-decoration: none;
+  // width: 120px;
   margin: auto;
   padding: 1rem 4rem;
   font-weight: bold;
-  transition: 0.5s;
+  transition: 1.0s;
 
-  &.blue {
-    border-color: #27acd9;
-    color: #27acd9;
-
-    &:hover {
-      background: #27acd9;
-      color: #ffffff;
-    }
-  }
 
   &.red {
     border-color: #d92727;
@@ -24,6 +15,16 @@
 
     &:hover {
       background: #d92727;
+      color: #ffffff;
+    }
+  }
+
+  &.blue {
+    border-color: #27acd9;
+    color: #27acd9;
+
+    &:hover {
+      background: #27acd9;
       color: #ffffff;
     }
   }
