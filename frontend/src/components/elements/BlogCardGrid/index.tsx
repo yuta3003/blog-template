@@ -57,6 +57,26 @@ const FullWidthGrid = () => {
             />
           </Item>
         </Grid>
+        <Grid item xs={6} md={3}>
+          <Item>
+            <BlogCard
+              imageSrc='/static/images/cards/contemplative-reptile.jpg'
+              imageAlt='Lizard'
+              title='Lizard'
+              description='Lizards are a widespread group of squamate reptiles, with over 6,000'
+            />
+          </Item>
+        </Grid>
+        <Grid item xs={6} md={3}>
+          <Item>
+            <BlogCard
+              imageSrc='/static/images/cards/contemplative-reptile.jpg'
+              imageAlt='Lizard'
+              title='Lizard'
+              description='Lizards are a widespread group of squamate reptiles, with over 6,000'
+            />
+          </Item>
+        </Grid>
       </Grid>
     </Box>
   );
