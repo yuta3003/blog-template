@@ -4,23 +4,18 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import { BlogCardData } from '@/types/BlogCardData';
 
-interface Props {
-  imageSrc: string;
-  imageAlt: string;
-  title: string;
-  description: string;
-}
 
-const BlogCard: React.FC<Props> = ({imageSrc, imageAlt, title, description }) => {
+const BlogCard: React.FC<BlogCardData> = ({thumbnailSrc, thumbnailAlt, title, description }) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="140"
-          image={imageSrc}
-          alt={imageAlt}
+          image={thumbnailSrc}
+          alt={thumbnailAlt}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
