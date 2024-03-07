@@ -4,7 +4,7 @@ import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Typography from '@mui/material/Typography'
 import { CardActionArea } from '@mui/material'
-import { BlogData } from '@/types/BlogCardData'
+import { BlogData } from '@/types/BlogData'
 
 const BlogCard: React.FC<BlogData> = ({
   thumbnailSrc,

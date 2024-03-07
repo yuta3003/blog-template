@@ -4,7 +4,7 @@ import Box from '@mui/material/Box'
 import Paper from '@mui/material/Paper'
 import Grid from '@mui/material/Grid'
 import BlogCard from '../BlogCard'
-import { BlogData } from '@/types/BlogCardData'
+import { BlogData } from '@/types/BlogData'
 
 // 仮のJSONデータ
 const mockData = [
@@ -109,16 +109,16 @@ const FullWidthGrid = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
-        {data.map((item, index) => (
-          <Grid item xs={6} md={3} key={index}>
+        {data.map((d) => (
+          <Grid item xs={6} md={3} key={d.id}>
             <Item>
               <BlogCard
-                id={item.id}
-                thumbnailSrc={item.thumbnailSrc}
-                thumbnailAlt={item.thumbnailAlt}
-                title={item.title}
-                description={item.description}
-                createdAt={item.createdAt}
+                id={d.id}
+                thumbnailSrc={d.thumbnailSrc}
+                thumbnailAlt={d.thumbnailAlt}
+                title={d.title}
+                description={d.description}
+                createdAt={d.createdAt}
               />
             </Item>
           </Grid>
