@@ -1,18 +1,19 @@
 'use client'
 
 import Image from 'next/image'
-import styles from './page.module.css'
+import styles from './page.module.scss'
 import Button from '../components/elements/Button'
+import Card from '../components/elements/Card'
 
 export default function Home() {
-  const handleClick = (event: any) => {
-    console.log('Button clicked!', event);
-  };
+  // const handleClick = (event: any) => {
+  //   console.log('Button clicked!', event);
+  // };
 
   return (
     <main className={styles.main}>
       <div>
-        <Button
+        {/* <Button
           text='Button'
           handleClick={handleClick}
           className="blue"
@@ -21,6 +22,12 @@ export default function Home() {
           text='Button'
           handleClick={handleClick}
           className="red"
+        /> */}
+        <Card
+          imageSrc='/static/images/cards/contemplative-reptile.jpg'
+          imageAlt='Lizard'
+          title='Lizard'
+          description='Lizards are a widespread group of squamate reptiles, with over 6,000'
         />
       </div>
     </main>
