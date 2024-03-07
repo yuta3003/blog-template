@@ -3,10 +3,9 @@ import { styled } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import Paper from '@mui/material/Paper'
 import Grid from '@mui/material/Grid'
-import BlogCard from '../BlogCard'
+import BlogCard from './BlogCard'
 import { BlogData } from '@/types/BlogData'
 
-// 仮のJSONデータ
 const mockData = [
   {
     id: 1,
@@ -103,7 +102,11 @@ const FullWidthGrid = () => {
   const [data, setData] = useState<BlogData[]>([])
 
   useEffect(() => {
-    setData(mockData)
+    function fetchData(){
+      mockData.sort((a, b) => b.id - a.id);
+      return mockData
+    }
+    setData(fetchData)
   }, [])
 
   return (
