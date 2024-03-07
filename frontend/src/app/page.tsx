@@ -3,7 +3,8 @@
 import Image from 'next/image'
 import styles from './page.module.scss'
 import Button from '../components/elements/Button'
-import Card from '../components/elements/Card'
+import BlogCard from '../components/elements/BlogCard'
+import BlogCardGrid from '../components/elements/BlogCardGrid'
 
 export default function Home() {
   // const handleClick = (event: any) => {
@@ -12,24 +13,15 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <div>
-        {/* <Button
-          text='Button'
-          handleClick={handleClick}
-          className="blue"
-        />
-        <Button
-          text='Button'
-          handleClick={handleClick}
-          className="red"
-        /> */}
-        <Card
+
+      <BlogCardGrid />
+
+        {/* <BlogCard
           imageSrc='/static/images/cards/contemplative-reptile.jpg'
           imageAlt='Lizard'
           title='Lizard'
           description='Lizards are a widespread group of squamate reptiles, with over 6,000'
-        />
-      </div>
+        /> */}
     </main>
     // <main className={styles.main}>
     //   <div className={styles.description}>

@@ -12,7 +12,7 @@ interface Props {
   description: string;
 }
 
-const MUICard: React.FC<Props> = ({imageSrc, imageAlt, title, description }) => {
+const BlogCard: React.FC<Props> = ({imageSrc, imageAlt, title, description }) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
@@ -35,4 +35,4 @@ const MUICard: React.FC<Props> = ({imageSrc, imageAlt, title, description }) => 
   );
 }
 
-export default MUICard
+export default BlogCard
