@@ -10,75 +10,84 @@ import { BlogData } from '@/types/BlogCardData'
 const mockData = [
   {
     id: 1,
-    thumbnailSrc: '/public/next.svg',
+    thumbnailSrc: '/static/python.jpg',
     thumbnailAlt: 'Lizard',
     title: 'Lizard',
     description:
       'Lizards are a widespread group of squamate reptiles, with over 6,000 species.',
+    createdAt: '2024-02-12',
   },
   {
     id: 2,
-    thumbnailSrc: '/static/images/cards/contemplative-reptile.jpg',
+    thumbnailSrc: '/static/go.png',
     thumbnailAlt: 'Python',
     title: 'Python',
     description:
       'Lizards are a widespread group of squamate reptiles, with over 6,000 species.',
+    createdAt: '2024-02-13',
   },
   {
     id: 3,
-    thumbnailSrc: '/static/images/cards/contemplative-reptile.jpg',
+    thumbnailSrc: '/static/go.png',
     thumbnailAlt: 'Snake',
     title: 'Snake',
     description:
       'Lizards are a widespread group of squamate reptiles, with over 6,000 species.',
+    createdAt: '2024-02-14',
   },
   {
     id: 4,
-    thumbnailSrc: '/static/images/cards/contemplative-reptile.jpg',
+    thumbnailSrc: '/static/python.jpg',
     thumbnailAlt: 'Lizard',
     title: 'Lizard',
     description:
       'Lizards are a widespread group of squamate reptiles, with over 6,000 species.',
+    createdAt: '2024-02-15',
   },
   {
     id: 5,
-    thumbnailSrc: '/static/images/cards/contemplative-reptile.jpg',
+    thumbnailSrc: '/static/python.jpg',
     thumbnailAlt: 'Python',
     title: 'Python',
     description:
       'Lizards are a widespread group of squamate reptiles, with over 6,000 species.',
+    createdAt: '2024-02-16',
   },
   {
     id: 6,
-    thumbnailSrc: '/static/images/cards/contemplative-reptile.jpg',
+    thumbnailSrc: '/static/go.png',
     thumbnailAlt: 'Snake',
     title: 'Snake',
     description:
       'Lizards are a widespread group of squamate reptiles, with over 6,000 species.',
+    createdAt: '2024-02-17',
   },
   {
     id: 7,
-    thumbnailSrc: '/static/images/cards/contemplative-reptile.jpg',
+    thumbnailSrc: '/static/python.jpg',
     thumbnailAlt: 'Lizard',
     title: 'Lizard',
     description:
       'Lizards are a widespread group of squamate reptiles, with over 6,000 species.',
+    createdAt: '2024-02-18',
   },
   {
     id: 8,
-    thumbnailSrc: '/static/images/cards/contemplative-reptile.jpg',
+    thumbnailSrc: '/static/python.jpg',
     thumbnailAlt: 'Python',
     title: 'Python',
     description:
       'Lizards are a widespread group of squamate reptiles, with over 6,000 species.',
+    createdAt: '2024-02-19',
   },
   {
     id: 9,
-    thumbnailSrc: '/static/images/cards/contemplative-reptile.jpg',
+    thumbnailSrc: '/static/go.png',
     thumbnailAlt: 'Snake',
     title: 'Snake',
     description:
       'Lizards are a widespread group of squamate reptiles, with over 6,000 species.',
+    createdAt: '2024-02-20',
   },
 ]
 
@@ -109,6 +118,7 @@ const FullWidthGrid = () => {
                 thumbnailAlt={item.thumbnailAlt}
                 title={item.title}
                 description={item.description}
+                createdAt={item.createdAt}
               />
             </Item>
           </Grid>

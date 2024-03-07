@@ -11,6 +11,7 @@ const BlogCard: React.FC<BlogData> = ({
   thumbnailAlt,
   title,
   description,
+  createdAt,
 }) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
@@ -20,12 +21,19 @@ const BlogCard: React.FC<BlogData> = ({
           height="140"
           image={thumbnailSrc}
           alt={thumbnailAlt}
+          sx={{
+            objectFit: 'contain', // この行を追加
+          }}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {title}
           </Typography>
+
           <Typography variant="body2" color="text.secondary">
+            {createdAt}
+          </Typography>
+          <Typography variant="caption" color="text.secondary">
             {description}
           </Typography>
         </CardContent>

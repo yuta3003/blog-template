@@ -4,4 +4,5 @@ export type BlogData = {
   thumbnailAlt: string
   title: string
   description: string
+  createdAt: string
 }
