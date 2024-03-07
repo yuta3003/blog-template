@@ -1,13 +1,17 @@
-import React from 'react';
-import styles from './Button.module.scss';
+import React from 'react'
+import styles from './Button.module.scss'
 
 interface Props {
-  text: string;
-  handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  className?: string;
+  text: string
+  handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void
+  className?: string
 }
 
-const Button: React.FC<Props> = ({ text, handleClick, className = 'default' }) => {
+const Button: React.FC<Props> = ({
+  text,
+  handleClick,
+  className = 'default',
+}) => {
   return (
     <button
       className={`${styles.button} ${styles[className]}`}
@@ -15,7 +19,7 @@ const Button: React.FC<Props> = ({ text, handleClick, className = 'default' }) =
     >
       {text}
     </button>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button

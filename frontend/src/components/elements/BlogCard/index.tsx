@@ -1,13 +1,17 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
-import { BlogCardData } from '@/types/BlogCardData';
+import * as React from 'react'
+import Card from '@mui/material/Card'
+import CardContent from '@mui/material/CardContent'
+import CardMedia from '@mui/material/CardMedia'
+import Typography from '@mui/material/Typography'
+import { CardActionArea } from '@mui/material'
+import { BlogData } from '@/types/BlogCardData'
 
-
-const BlogCard: React.FC<BlogCardData> = ({thumbnailSrc, thumbnailAlt, title, description }) => {
+const BlogCard: React.FC<BlogData> = ({
+  thumbnailSrc,
+  thumbnailAlt,
+  title,
+  description,
+}) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
@@ -27,7 +31,7 @@ const BlogCard: React.FC<BlogCardData> = ({thumbnailSrc, thumbnailAlt, title, de
         </CardContent>
       </CardActionArea>
     </Card>
-  );
+  )
 }
 
 export default BlogCard

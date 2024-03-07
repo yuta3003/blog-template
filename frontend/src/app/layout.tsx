@@ -4,7 +4,6 @@ import './globals.scss'
 import Header from '../components/layouts/Header'
 import Footer from '../components/layouts/Footer'
 
-
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
