@@ -5,24 +5,32 @@ import CardMedia from '@mui/material/CardMedia'
 import Typography from '@mui/material/Typography'
 import { CardActionArea } from '@mui/material'
 import { BlogData } from '@/types/BlogData'
+import { useRouter } from 'next/navigation'
 
 const BlogCard: React.FC<BlogData> = ({
+  id,
   thumbnailSrc,
   thumbnailAlt,
   title,
   description,
   createdAt,
 }) => {
+
+  const router = useRouter();
+  const handleCardClick = () => {
+    router.push(`/posts/${id}`);
+  };
+
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+      <CardActionArea onClick={handleCardClick}>
         <CardMedia
           component="img"
           height="140"
           image={thumbnailSrc}
           alt={thumbnailAlt}
           sx={{
-            objectFit: 'contain', // この行を追加
+            objectFit: 'contain',
           }}
         />
         <CardContent>
