@@ -9,7 +9,7 @@ import { BlogData } from '@/types/BlogData'
 const mockData = [
   {
     id: 1,
-    thumbnailSrc: '/static/python.jpg',
+    thumbnailSrc: '/images/thumbnail/python.jpg',
     thumbnailAlt: 'Lizard',
     title: 'Lizard',
     description:
@@ -18,7 +18,7 @@ const mockData = [
   },
   {
     id: 2,
-    thumbnailSrc: '/static/go.png',
+    thumbnailSrc: '/images/thumbnail/go.png',
     thumbnailAlt: 'Python',
     title: 'Python',
     description:
@@ -27,7 +27,7 @@ const mockData = [
   },
   {
     id: 3,
-    thumbnailSrc: '/static/go.png',
+    thumbnailSrc: '/images/thumbnail/go.png',
     thumbnailAlt: 'Snake',
     title: 'Snake',
     description:
@@ -36,7 +36,7 @@ const mockData = [
   },
   {
     id: 4,
-    thumbnailSrc: '/static/python.jpg',
+    thumbnailSrc: '/images/thumbnail/rust.svg',
     thumbnailAlt: 'Lizard',
     title: 'Lizard',
     description:
@@ -45,7 +45,7 @@ const mockData = [
   },
   {
     id: 5,
-    thumbnailSrc: '/static/python.jpg',
+    thumbnailSrc: '/images/thumbnail/python.jpg',
     thumbnailAlt: 'Python',
     title: 'Python',
     description:
@@ -54,7 +54,7 @@ const mockData = [
   },
   {
     id: 6,
-    thumbnailSrc: '/static/go.png',
+    thumbnailSrc: '/images/thumbnail/go.png',
     thumbnailAlt: 'Snake',
     title: 'Snake',
     description:
@@ -63,7 +63,7 @@ const mockData = [
   },
   {
     id: 7,
-    thumbnailSrc: '/static/python.jpg',
+    thumbnailSrc: '/images/thumbnail/python.jpg',
     thumbnailAlt: 'Lizard',
     title: 'Lizard',
     description:
@@ -72,7 +72,7 @@ const mockData = [
   },
   {
     id: 8,
-    thumbnailSrc: '/static/python.jpg',
+    thumbnailSrc: '/images/thumbnail/python.jpg',
     thumbnailAlt: 'Python',
     title: 'Python',
     description:
@@ -81,7 +81,7 @@ const mockData = [
   },
   {
     id: 9,
-    thumbnailSrc: '/static/go.png',
+    thumbnailSrc: '/images/thumbnail/go.png',
     thumbnailAlt: 'Snake',
     title: 'Snake',
     description:

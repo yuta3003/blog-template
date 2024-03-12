@@ -1,7 +1,12 @@
 import React from 'react'
+import styles from './Footer.module.scss'
 
 const Footer = () => {
-  return <div>404 motivation not found</div>
+  return (
+    <div className={styles.footer}>
+      404 motivation not found
+    </div>
+  )
 }
 
 export default Footer
