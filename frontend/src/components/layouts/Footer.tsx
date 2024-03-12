@@ -1,14 +1,21 @@
 import React from 'react'
+import Link from 'next/link'
 import styles from './Footer.module.scss'
 
 const Footer = () => {
   return (
-    <footer className={""}>
+    <footer className={styles.footer}>
       <p className={""}>© 2023 Example Inc. All Rights Reserved.</p>
-      <ul className={""}>
-        <li><a href="#">About</a></li>
-        <li><a href="#">サイトマップ</a></li>
-        <li><a href="#">プライバシーポリシー</a></li>
+      <ul className={styles['nav-list']}>
+        <li className={styles['nav-item']}>
+          <Link href="#">About</Link>
+        </li>
+        <li className={styles['nav-item']}>
+          <Link href="#">サイトマップ</Link>
+        </li>
+        <li className={styles['nav-item']}>
+          <Link href="#">プライバシーポリシー</Link>
+        </li>
       </ul>
     </footer>
   )

@@ -1,7 +1,27 @@
 .footer {
+  font-family: sans-serif;
   padding: 2rem;
   font-size: 15px;
   color: #999;
   background: #fff;
   border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin-left: 16px;
+    display: flex;
+
+    .nav-item {
+      padding: 10px 15px;
+      color: #999;
+      text-decoration: none;
+
+      &:hover {
+        color: #333;
+      }
+    }
+  }
 }
