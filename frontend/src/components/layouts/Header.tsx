@@ -4,7 +4,28 @@ import styles from './Header.module.scss'
 const Header = () => {
   return (
     <div className={styles.header}>
-      <Link className={styles['site-logo']} href="/">404 motivation not found</Link>
+      <div className={styles['site-logo']}>
+        <Link href="/">404 motivation not found</Link>
+      </div>
+      <nav>
+        <ul className={styles['nav-list']}>
+          <li className={styles['nav-item']}>
+            <Link href="#">NEWS</Link>
+          </li>
+          <li className={styles['nav-item']}>
+            <Link href="#">NEWS</Link>
+          </li>
+          <li className={styles['nav-item']}>
+            <Link href="#">NEWS</Link>
+          </li>
+          <li className={styles['nav-item']}>
+            <Link href="#">NEWS</Link>
+          </li>
+          <li className={styles['nav-item']}>
+            <Link href="#">NEWS</Link>
+          </li>
+        </ul>
+      </nav>
     </div>
   )
 }
